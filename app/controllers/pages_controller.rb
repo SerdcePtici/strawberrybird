@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
 
-  layout false
+  #layout 'application', except: :main
+  #layout  except: [:main]
 
-  def index
+  def main
+    render layout: false
   end
+
 end

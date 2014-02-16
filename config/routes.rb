@@ -1,9 +1,7 @@
 Strawberrybird::Application.routes.draw do
 
-  root to: 'pages#1_berry'
-  get "pages/1_berry"
+  root to: 'pages#main'
   get "pages/abc_berry"
-  get "pages/main"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
