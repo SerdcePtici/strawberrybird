@@ -1,7 +1,10 @@
 Strawberrybird::Application.routes.draw do
 
   root to: 'pages#main'
-  get "pages/abc_berry"
+  get "pages/poems_list"
+  get "pages/poem_text"
+  get "pages/author"
+  get "pages/guest_book"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

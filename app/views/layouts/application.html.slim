@@ -3,20 +3,23 @@ html
   head
     meta(charset="utf-8")
     link rel="shortcut icon" href=image_path('zemlaninovka/favicon.png') type="image/png"
-    =stylesheet_link_tag '1_berry'
+    =stylesheet_link_tag 'application'
   body
     #root
       #header
         =image_tag('zemlaninovka/title.png', height: 60)
         #berry_title
           =image_tag('zemlaninovka/berry1.png', height: 120)
-      #menu
+      ul id="menu"
         =image_tag('zemlaninovka/menu.png', height: 370)
-        #author
-        #poetry
-        #prose
-        #guestbook
-
+        li id="author"
+          a href="https://vk.com/feed"
+        li id="poetry"
+          a href="https://vk.com/feed"
+        li id="prose"
+          a href="https://vk.com/feed"
+        li id="guestbook"
+          a href="https://vk.com/feed"
       #stick
         =image_tag('zemlaninovka/stick.png', height: 330)
       #content
@@ -24,6 +27,12 @@ html
       #root_footer
     #footer
       #made_by
-        =image_tag('zemlaninovka/footer.png', height: 50)
+        |Программное обеспечение Григорьев О.
+        br
+        |Верстка Григорьева Ю.
+        br
+        |Дизайн Фанина А.
+        br
+        |2014&copy
 
 
