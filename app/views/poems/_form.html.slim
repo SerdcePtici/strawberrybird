@@ -1,15 +1,9 @@
-= form_for @poem do |f|
-  - if @poem.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@poem.errors.count, "error")} prohibited this poem from being saved:"
-      ul
-        - @poem.errors.full_messages.each do |message|
-          li = message
+= simple_form_for(@poem) do |f|
+  = f.error_notification
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :text
-    = f.text_field :text
-  .actions = f.submit 'Save'
+  .form-inputs
+    = f.input :title
+    = f.input :text, as: :text
+
+  .form-actions
+    = f.button :submit
