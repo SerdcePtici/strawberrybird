@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @poem.title
+p
+  strong Text:
+  = @poem.text
+
+= link_to 'Edit', edit_poem_path(@poem)
+'|
+= link_to 'Back', poems_path

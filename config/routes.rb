@@ -2,6 +2,7 @@ Strawberrybird::Application.routes.draw do
 
   root to: 'pages#main'
   get 'author', to: 'pages#author'
+  resources :poems
   get "pages/poems_list"
   get "pages/poem_text"
   get "pages/guest_book"

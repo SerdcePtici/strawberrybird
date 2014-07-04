@@ -1,0 +1,9 @@
+= link_to 'New Poem', new_poem_path
+
+
+#table_of_contents
+  - @poems.each do |poem|
+    = link_to poem.title, poem
+    = link_to 'Редактировать', edit_poem_path(poem)
+    = link_to 'Удалить', poem, data: {:confirm => 'Are you sure?'}, method: :delete
+    br
