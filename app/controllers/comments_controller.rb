@@ -1,5 +1,6 @@
 class CommentsController < InheritedResources::Base
-  actions :all, except: [:edit, :show, :update]
+  # actions :all, except: [:edit, :show, :update]
+  actions :index, :create, :destroy
 
   def index
     @comments = Comment.all

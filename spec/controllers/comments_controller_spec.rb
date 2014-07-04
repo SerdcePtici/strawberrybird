@@ -44,13 +44,6 @@ RSpec.describe CommentsController, :type => :controller do
     end
   end
 
-  describe "GET new" do
-    it "assigns a new comment as @comment" do
-      get :new, {}, valid_session
-      expect(assigns(:comment)).to be_a_new(Comment)
-    end
-  end
-
   describe "POST create" do
     describe "with valid params" do
       it "creates a new Comment" do
