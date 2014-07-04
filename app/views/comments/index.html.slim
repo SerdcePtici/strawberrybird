@@ -6,7 +6,7 @@
       span class="guest_name"
         = comment.author
       span class="date"
-        = comment.created_at
+        = l comment.created_at, format: :short
       p class="comment_text"
         = simple_format comment.text
       td = link_to 'Destroy', comment, data: {:confirm => 'Are you sure?'}, :method => :delete

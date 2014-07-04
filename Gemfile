@@ -32,6 +32,9 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 #gem 'jbuilder', '~> 1.2'
 
+gem 'inherited_resources'
+gem 'russian'
+
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'

@@ -24,11 +24,11 @@ RSpec.describe CommentsController, :type => :controller do
   # Comment. As you add validations to Comment, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    attributes_for(:comment)
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {author: '', text: ''}
   }
 
   # This should return the minimal set of values that should be in the session
@@ -44,26 +44,10 @@ RSpec.describe CommentsController, :type => :controller do
     end
   end
 
-  describe "GET show" do
-    it "assigns the requested comment as @comment" do
-      comment = Comment.create! valid_attributes
-      get :show, {:id => comment.to_param}, valid_session
-      expect(assigns(:comment)).to eq(comment)
-    end
-  end
-
   describe "GET new" do
     it "assigns a new comment as @comment" do
       get :new, {}, valid_session
       expect(assigns(:comment)).to be_a_new(Comment)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested comment as @comment" do
-      comment = Comment.create! valid_attributes
-      get :edit, {:id => comment.to_param}, valid_session
-      expect(assigns(:comment)).to eq(comment)
     end
   end
 
@@ -83,7 +67,7 @@ RSpec.describe CommentsController, :type => :controller do
 
       it "redirects to the created comment" do
         post :create, {:comment => valid_attributes}, valid_session
-        expect(response).to redirect_to(Comment.last)
+        expect(response).to redirect_to(comments_url)
       end
     end
 
@@ -96,47 +80,6 @@ RSpec.describe CommentsController, :type => :controller do
       it "re-renders the 'new' template" do
         post :create, {:comment => invalid_attributes}, valid_session
         expect(response).to render_template("new")
-      end
-    end
-  end
-
-  describe "PUT update" do
-    describe "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested comment" do
-        comment = Comment.create! valid_attributes
-        put :update, {:id => comment.to_param, :comment => new_attributes}, valid_session
-        comment.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "assigns the requested comment as @comment" do
-        comment = Comment.create! valid_attributes
-        put :update, {:id => comment.to_param, :comment => valid_attributes}, valid_session
-        expect(assigns(:comment)).to eq(comment)
-      end
-
-      it "redirects to the comment" do
-        comment = Comment.create! valid_attributes
-        put :update, {:id => comment.to_param, :comment => valid_attributes}, valid_session
-        expect(response).to redirect_to(comment)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns the comment as @comment" do
-        comment = Comment.create! valid_attributes
-        put :update, {:id => comment.to_param, :comment => invalid_attributes}, valid_session
-        expect(assigns(:comment)).to eq(comment)
-      end
-
-      it "re-renders the 'edit' template" do
-        comment = Comment.create! valid_attributes
-        put :update, {:id => comment.to_param, :comment => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
       end
     end
   end
