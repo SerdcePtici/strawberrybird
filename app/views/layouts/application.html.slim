@@ -4,6 +4,9 @@ html
     meta(charset="utf-8")
     link rel="shortcut icon" href=image_path('zemlaninovka/favicon.png') type="image/png"
     =stylesheet_link_tag 'application'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    title Земляниновка
   body
     #root
       #header
@@ -23,6 +26,7 @@ html
       #stick
         =image_tag('zemlaninovka/stick.png', height: 330)
       #content
+        p#notice = notice
         = yield
       #root_footer
     #footer

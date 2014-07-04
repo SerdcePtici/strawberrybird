@@ -1,12 +1,8 @@
-p#notice = notice
+#product
+  span class="all_title"
+    = @poem.title
+  #product_text
+    = simple_format @poem.text
 
-p
-  strong Title:
-  = @poem.title
-p
-  strong Text:
-  = @poem.text
-
-= link_to 'Edit', edit_poem_path(@poem)
-'|
-= link_to 'Back', poems_path
+= link_to 'Редактировать', edit_poem_path(@poem)
+= link_to 'Удалить', @poem, data: {:confirm => 'Подтвердите удаление'}, method: :delete
