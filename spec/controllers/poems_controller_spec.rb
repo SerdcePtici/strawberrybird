@@ -24,11 +24,11 @@ RSpec.describe PoemsController, :type => :controller do
   # Poem. As you add validations to Poem, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    attributes_for(:poem)
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {title: '', text: ''}
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,14 +103,14 @@ RSpec.describe PoemsController, :type => :controller do
   describe "PUT update" do
     describe "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        attributes_for(:poem, title: 'new')
       }
 
       it "updates the requested poem" do
         poem = Poem.create! valid_attributes
         put :update, {:id => poem.to_param, :poem => new_attributes}, valid_session
         poem.reload
-        skip("Add assertions for updated state")
+        expect(poem.title).to eq 'new'
       end
 
       it "assigns the requested poem as @poem" do
