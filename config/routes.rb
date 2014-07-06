@@ -1,8 +1,10 @@
 Strawberrybird::Application.routes.draw do
 
+
   root to: 'pages#main'
   get 'author', to: 'pages#author'
   resources :poems
+  resources :proses
   resources :comments, path: 'guest_book', only: [:index, :create, :destroy]
   get "pages/poems_list"
   get "pages/poem_text"

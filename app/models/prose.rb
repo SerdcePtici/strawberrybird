@@ -1,0 +1,2 @@
+class Prose < Post
+end

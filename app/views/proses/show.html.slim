@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @prose.title
+p
+  strong Text:
+  = @prose.text
+
+= link_to 'Edit', edit_prose_path(@prose)
+'|
+= link_to 'Back', proses_path

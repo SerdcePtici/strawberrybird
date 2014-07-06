@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140704155012) do
+ActiveRecord::Schema.define(version: 20140706133715) do
 
   create_table "comments", force: true do |t|
     t.string   "author"
@@ -20,11 +20,12 @@ ActiveRecord::Schema.define(version: 20140704155012) do
     t.datetime "updated_at"
   end
 
-  create_table "poems", force: true do |t|
+  create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type",       default: "Poem"
   end
 
 end

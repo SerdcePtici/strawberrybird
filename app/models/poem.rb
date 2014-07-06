@@ -1,3 +1,2 @@
-class Poem < ActiveRecord::Base
-  validates :title, :text, presence: true
+class Poem < Post
 end

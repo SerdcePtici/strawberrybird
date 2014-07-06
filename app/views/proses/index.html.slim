@@ -1,0 +1,21 @@
+h1 Listing proses
+
+table
+  tr
+    th Title
+    th Text
+    th
+    th
+    th
+
+  - @proses.each do |prose|
+    tr
+      td = prose.title
+      td = prose.text
+      td = link_to 'Show', prose
+      td = link_to 'Edit', edit_prose_path(prose)
+      td = link_to 'Destroy', prose, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Prose', new_prose_path
