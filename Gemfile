@@ -33,7 +33,11 @@ gem 'turbolinks'
 #gem 'jbuilder', '~> 1.2'
 
 gem 'inherited_resources'
+gem 'has_scope'
 gem 'russian'
+
+# Pagination
+gem 'kaminari'
 
 group :development do
   gem 'spring'

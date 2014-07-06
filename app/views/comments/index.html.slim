@@ -10,3 +10,5 @@
       p class="comment_text"
         = simple_format comment.text
       td = link_to 'Destroy', comment, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+= paginate @comments
