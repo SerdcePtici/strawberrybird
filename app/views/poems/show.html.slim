@@ -1,8 +1,0 @@
-#product
-  span class="all_title"
-    = @poem.title
-  #product_text
-    = simple_format @poem.text
-
-= link_to 'Редактировать', edit_poem_path(@poem)
-= link_to 'Удалить', @poem, data: {:confirm => 'Подтвердите удаление'}, method: :delete

@@ -37,7 +37,7 @@ RSpec.describe PoemsController, :type => :controller do
   let(:valid_session) { {} }
 
   describe "GET index" do
-    it "assigns all poems as @poems" do
+    it "assigns all posts as @posts" do
       poem = Poem.create! valid_attributes
       get :index, {}, valid_session
       expect(assigns(:poems)).to eq([poem])
@@ -149,7 +149,7 @@ RSpec.describe PoemsController, :type => :controller do
       }.to change(Poem, :count).by(-1)
     end
 
-    it "redirects to the poems list" do
+    it "redirects to the posts list" do
       poem = Poem.create! valid_attributes
       delete :destroy, {:id => poem.to_param}, valid_session
       expect(response).to redirect_to(poems_url)
