@@ -3,6 +3,6 @@ class Comment < ActiveRecord::Base
 
   default_scope { order created_at: :desc }
 
-  paginates_per 2
+  paginates_per 10
 
 end
