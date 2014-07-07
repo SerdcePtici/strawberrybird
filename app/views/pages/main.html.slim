@@ -6,7 +6,7 @@ html
     =stylesheet_link_tag 'main'
     title Земляниновка
   body
-    a id="content_bird" class="main_link" href="http://www.stihi.ru/"
+    = link_to author_path, id: :content_bird, class: :main_link do
       =image_tag('zemlaninovka/main_bird.png', height: 450)
-    a id="title_bird" class="main_link" href="http://www.stihi.ru/"
+    = link_to author_path, id: :title_bird, class: :main_link do
       =image_tag('zemlaninovka/title_bird.png', height: 100)

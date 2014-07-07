@@ -1,0 +1,9 @@
+= link_to 'Написать', new_resource_path
+
+
+#table_of_contents
+  - collection.each do |post|
+    = link_to post.title, post
+    = link_to 'Редактировать', edit_resource_path(post)
+    = link_to 'Удалить', post, data: {confirm: 'Подтвердите удаление'}, method: :delete
+    br

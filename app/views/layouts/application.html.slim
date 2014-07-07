@@ -4,6 +4,9 @@ html
     meta(charset="utf-8")
     link rel="shortcut icon" href=image_path('zemlaninovka/favicon.png') type="image/png"
     =stylesheet_link_tag 'application'
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    title Земляниновка
   body
     #root
       #header
@@ -13,16 +16,17 @@ html
       ul id="menu"
         =image_tag('zemlaninovka/menu.png', height: 370)
         li id="author"
-          a href="https://vk.com/feed"
+          = link_to '', author_path
         li id="poetry"
-          a href="https://vk.com/feed"
+          = link_to '', poems_path
         li id="prose"
-          a href="https://vk.com/feed"
+          = link_to '', proses_path
         li id="guestbook"
-          a href="https://vk.com/feed"
+          = link_to '', comments_path
       #stick
         =image_tag('zemlaninovka/stick.png', height: 330)
       #content
+        p#notice = notice
         = yield
       #root_footer
     #footer
