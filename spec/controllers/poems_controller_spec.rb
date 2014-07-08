@@ -53,6 +53,7 @@ RSpec.describe PoemsController, :type => :controller do
   end
 
   describe "GET new" do
+    before { sign_in create(:admin) }
     it "assigns a new poem as @poem" do
       get :new, {}, valid_session
       expect(assigns(:poem)).to be_a_new(Poem)
@@ -60,6 +61,7 @@ RSpec.describe PoemsController, :type => :controller do
   end
 
   describe "GET edit" do
+    before { sign_in create(:admin) }
     it "assigns the requested poem as @poem" do
       poem = Poem.create! valid_attributes
       get :edit, {:id => poem.to_param}, valid_session
@@ -68,6 +70,7 @@ RSpec.describe PoemsController, :type => :controller do
   end
 
   describe "POST create" do
+    before { sign_in create(:admin) }
     describe "with valid params" do
       it "creates a new Poem" do
         expect {
@@ -101,6 +104,7 @@ RSpec.describe PoemsController, :type => :controller do
   end
 
   describe "PUT update" do
+    before { sign_in create(:admin) }
     describe "with valid params" do
       let(:new_attributes) {
         attributes_for(:poem, title: 'new')
@@ -142,6 +146,7 @@ RSpec.describe PoemsController, :type => :controller do
   end
 
   describe "DELETE destroy" do
+    before { sign_in create(:admin) }
     it "destroys the requested poem" do
       poem = Poem.create! valid_attributes
       expect {

@@ -9,6 +9,7 @@ Strawberrybird::Application.routes.draw do
   get "pages/poems_list"
   get "pages/poem_text"
   get "pages/guest_book"
+  devise_for :users
 
 
   # The priority is based upon order of creation: first created -> highest priority.

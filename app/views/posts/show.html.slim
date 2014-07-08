@@ -4,5 +4,7 @@
   #product_text
     = simple_format resource.text
 
-= link_to 'Редактировать', edit_resource_path(resource)
-= link_to 'Удалить', resource, data: {:confirm => 'Подтвердите удаление'}, method: :delete
+- if can? :edit, resource
+  = link_to 'Редактировать', edit_resource_path(resource)
+- if can? :destroy, resource
+  = link_to 'Удалить', resource, data: {confirm: 'Подтвердите удаление'}, method: :delete
