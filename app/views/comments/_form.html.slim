@@ -1,9 +1,10 @@
 = simple_form_for(@comment) do |f|
+
   = f.error_notification
 
   .form-inputs
-    = f.input :author
-    = f.input :text
+    = f.input :author, label: 'Имя:'
+    = f.input :text, label: 'Комментарий'
 
   .form-actions
-    = f.button :submit
+    = f.submit 'Отправить'
