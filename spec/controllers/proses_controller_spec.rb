@@ -53,6 +53,7 @@ RSpec.describe ProsesController, :type => :controller do
   end
 
   describe "GET new" do
+    before { sign_in create(:admin) }
     it "assigns a new prose as @prose" do
       get :new, {}, valid_session
       expect(assigns(:prose)).to be_a_new(Prose)
@@ -60,6 +61,7 @@ RSpec.describe ProsesController, :type => :controller do
   end
 
   describe "GET edit" do
+    before { sign_in create(:admin) }
     it "assigns the requested prose as @prose" do
       prose = Prose.create! valid_attributes
       get :edit, {:id => prose.to_param}, valid_session
@@ -68,6 +70,7 @@ RSpec.describe ProsesController, :type => :controller do
   end
 
   describe "POST create" do
+    before { sign_in create(:admin) }
     describe "with valid params" do
       it "creates a new Prose" do
         expect {
@@ -101,6 +104,7 @@ RSpec.describe ProsesController, :type => :controller do
   end
 
   describe "PUT update" do
+    before { sign_in create(:admin) }
     describe "with valid params" do
       let(:new_attributes) {
         attributes_for(:prose, title: 'new')
@@ -142,6 +146,7 @@ RSpec.describe ProsesController, :type => :controller do
   end
 
   describe "DELETE destroy" do
+    before { sign_in create(:admin) }
     it "destroys the requested prose" do
       prose = Prose.create! valid_attributes
       expect {

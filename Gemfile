@@ -39,6 +39,12 @@ gem 'russian'
 # Pagination
 gem 'kaminari'
 
+# Authentication
+gem 'devise'
+
+# Authorization
+gem 'cancan'
+
 group :development do
   gem 'spring'
   gem 'spring-commands-rspec'

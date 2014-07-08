@@ -78,6 +78,8 @@ RSpec.describe CommentsController, :type => :controller do
   end
 
   describe "DELETE destroy" do
+    before { sign_in create(:admin) }
+
     it "destroys the requested comment" do
       comment = Comment.create! valid_attributes
       expect {

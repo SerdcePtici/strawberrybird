@@ -9,6 +9,10 @@ html
     title Земляниновка
   body
     #root
+      p#notice = notice
+      - if user_signed_in?
+        #exit
+          = link_to 'Выйти', destroy_user_session_path, method: :delete
       #header
         =image_tag('zemlaninovka/title.png', height: 60)
         #berry_title
