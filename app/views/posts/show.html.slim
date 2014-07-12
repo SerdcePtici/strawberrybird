@@ -1,10 +1,10 @@
 #product
-  span class="all_title"
+  span class="product_title"
     = resource.title
   #product_text
     = simple_format resource.text
 
 - if can? :edit, resource
-  = link_to 'Редактировать', edit_resource_path(resource)
+  = link_to 'Редактировать', edit_resource_path(resource), class: :edit 
 - if can? :destroy, resource
-  = link_to 'Удалить', resource, data: {confirm: 'Подтвердите удаление'}, method: :delete
+  = link_to 'Удалить', resource, data: {confirm: 'Подтвердите удаление'}, method: :delete, class: :del

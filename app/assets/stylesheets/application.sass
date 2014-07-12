@@ -1,30 +1,26 @@
 @import "compass/reset"
 @import "compass/layout"
-@import "shared"
-@import "font"
 
-+sticky-footer(+76px)
++sticky-footer(+70px)
 
-
-// @font-face
-//   font-family: neucha
-//   src: font-url("neucha.otf")
+body
+  background:
+    color: #b1eec4
+    image: linear-gradient(to top, #87d59b, #caf7d8) 
+    attachment: fixed
+  min-width: 1000px
 
 
 #header
   margin: 0 auto
   width: 630px
   padding-top: 20px
-  position: relative
 
 #berry_title
   left: 345px
   top: 60px
-  position: absolute
-
 
 #menu
-  position: relative
   float: left
   margin: 70px 0 20px 30px
   line-height: 0px
@@ -47,25 +43,21 @@
 #stick
   float: left
   margin-top: 120px
-  margin-left: 25px
+  margin-left: 27px
 
 #content
-  margin: 150px 40px 40px 300px
+  margin: 150px 40px 40px 330px
   font-size: 25px
-  line-height: 1.3
+  line-height: 30px
   
-#menu
-  position: relative
 
 #author, #poetry, #prose, #guestbook
-  position: absolute
   display: block
 
 #made_by
   font-size: 15px
-  font-family: neuchawebfont, Times New Roman
   margin-left: 10px
-  line-height: 1.3em
+  line-height: 17px
 
 
 li a
@@ -75,15 +67,8 @@ li a, #author, #poetry, #prose, #guestbook
   width: 163px
   height: 58px 
 
-.all_title
-  font-size: 28px
-
-#product_text
-  margin-top: 20px
-
 #epigraph
   text-align: right
-  margin-bottom: 20px 
 
 .author_img
   display: inline-block
@@ -91,21 +76,16 @@ li a, #author, #poetry, #prose, #guestbook
 
 #author_photo 
   text-align: center
-  margin-top: 20px
-
+ 
 #hello_world p
   margin-top: 10px
 
-// #table_form 
 .form-inputs
   display: table
-  margin-top: 20px
-
-//.tr_form
+  
 .comment_author, .comment_text
   display: table-row
 
-// .td_form
 .control-label, #comment_author, #comment_text 
   display: table-cell
   vertical-align: middle
@@ -113,9 +93,8 @@ li a, #author, #poetry, #prose, #guestbook
 
 textarea
   max-width: 400px
-  margin: 1px
 
-label.td_form, .guest_name, .date, #pages a
+.control-label, #pages a
   font-size: 23px
 
 
@@ -138,25 +117,47 @@ input[type="submit"]:focus
 input[type="submit"]:hover, input[type="submit"]:focus
   background-color: #49a74f
 
-.guest_name
+.guest_name, .del, .edit
   margin-right: 5px
 
 #comment_table
   margin-top: 30px
 
-.comment_number
-  margin-bottom: 20px
-  
+.comment_number p
+  margin-left: 15px
+  font-size: 21px
+ 
 #pages a
-  text-decoration: none
-  color: black
   margin-right: 5px
-  
 
-.comment_current_page_number
-  font-weight: bold
+.comment_current_page_number, .product_title
   font-size: 26px
 
+.guest_name, .date
+  font-size: 25px
 
+#menu, #header
+  position: relative
 
+#berry_title, #author, #poetry, #prose, #guestbook
+  position: absolute
 
+#pages a, body a:link, body a:visited
+  color: black
+  text-decoration: none
+
+.comment_current_page_numbe, .guest_name, .date, .product_title
+  font-weight: bold
+
+#author_photo, .form-inputs, .del, .edit
+  margin-top: 20px
+
+#epigraph, .comment_number
+  margin-bottom: 20px 
+
+#product_text p 
+  margin-top: 10px
+
+.del, .edit
+  display: inline-block
+ 
