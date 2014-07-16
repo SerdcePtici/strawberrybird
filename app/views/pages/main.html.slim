@@ -7,9 +7,10 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     title Земляниновка
   body
-    = link_to author_path, id: :content_bird, class: :main_link do
-      =image_tag('zemlaninovka/main_bird.png', height: 450)
-      #eyes
-        = image_tag('zemlaninovka/eyes.png', height: 44)
-    = link_to author_path, id: :title_bird,  class: :main_link do
-      =image_tag('zemlaninovka/title_bird.png', height: 100)
+    #main_wrap
+      = link_to author_path, id: :content_bird, class: :main_link do
+        =image_tag('zemlaninovka/main_bird.png', height: 450)
+        #eyes
+          = image_tag('zemlaninovka/eyes.png', height: 44)
+      = link_to author_path, id: :title_bird,  class: :main_link do
+        =image_tag('zemlaninovka/title_bird.png', height: 100)

@@ -3,6 +3,6 @@
   = link_to 'Написать', new_resource_path
 
 #table_of_contents
-  - collection.each do |post|
-    = link_to post.title, post
-    br
+  ul#list
+	- collection.each do |post|
+	  li.products = link_to post.title, post
