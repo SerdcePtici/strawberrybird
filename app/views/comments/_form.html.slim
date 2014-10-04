@@ -4,7 +4,7 @@
 
   .form-inputs
     = f.input :author, label: 'Имя:'
-    = f.input :text, label: 'Комментарий'
+    = f.input :text, label: 'Комментарий', input_html: { rows: 5 }
 
   .form-actions
     = f.submit 'Отправить'
