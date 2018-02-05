@@ -13,6 +13,12 @@ body
   width: 630px
   padding-top: 20px
 
+#notice
+  background: green
+  color: yellow
+  text-align: center
+  padding: 10px
+
 #berry_title
   left: 345px
   top: 60px
@@ -46,7 +52,7 @@ body
   margin: 150px 40px 40px 330px
   font-size: 25px
   line-height: 30px
-  
+
 
 #author, #poetry, #prose, #guestbook
   display: block
@@ -62,7 +68,7 @@ body
 
 #author a, #poetry a, #prose a, #guestbook a
   width: 163px
-  height: 58px 
+  height: 58px
 
 #epigraph
   text-align: right
@@ -71,19 +77,19 @@ body
   display: inline-block
   margin-right: 30px
 
-#author_photo 
+#author_photo
   text-align: center
- 
+
 #hello_world p
   margin-top: 10px
 
 .form-inputs
   display: table
-  
+
 .comment_author, .comment_text
   display: table-row
 
-.control-label, #comment_author, #comment_text 
+.control-label, #comment_author, #comment_text
   display: table-cell
   vertical-align: middle
   margin-left: 4px
@@ -97,22 +103,22 @@ textarea
 
 textarea, input[type="text"]
   border: 1px solid #41a046
-  
+
 textarea:focus, input[type="text"]:focus
   outline: 1px ridge #12650d
 
-input[type="submit"]
+input[type="submit"], button[type="submit"]
   background-color: #6bc069
   font-size: 17px
   padding: 5px
   border: 1px solid #12650d
   margin-top: 10px
 
-input[type="submit"]:focus
-  outline: none
+  &:focus
+    outline: none
 
-input[type="submit"]:hover, input[type="submit"]:focus
-  background-color: #49a74f
+  &:hover, &:focus
+    background-color: #49a74f
 
 .guest_name, .del, .edit
   margin-right: 5px
@@ -123,7 +129,7 @@ input[type="submit"]:hover, input[type="submit"]:focus
 .comment_number p
   margin-left: 15px
   font-size: 21px
- 
+
 #pages a
   margin-right: 5px
 
@@ -150,9 +156,9 @@ input[type="submit"]:hover, input[type="submit"]:focus
   margin-top: 20px
 
 #epigraph, .comment_number
-  margin-bottom: 20px 
+  margin-bottom: 20px
 
-#product_text p 
+#product_text p
   margin-top: 10px
 
 .del, .edit

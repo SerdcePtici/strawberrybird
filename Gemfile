@@ -39,6 +39,7 @@ gem 'turbolinks'
 gem 'inherited_resources', '~> 1.4.1'
 gem 'has_scope'
 gem 'russian'
+gem 'recaptcha', require: 'recaptcha/rails'
 
 # Pagination
 gem 'kaminari'
@@ -59,6 +60,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'dotenv-rails'
 end
 
 group :doc do

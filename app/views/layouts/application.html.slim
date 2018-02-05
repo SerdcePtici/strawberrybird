@@ -9,7 +9,8 @@ html
     title = @title || 'Земляниновка'
   body
     #root
-      p#notice = notice
+      - if notice.present?
+        p#notice = notice
       - if user_signed_in?
         #exit
           = link_to 'Выйти', destroy_user_session_path, method: :delete
@@ -35,13 +36,13 @@ html
       #root_footer
     #footer
       #made_by
-        |Программное обеспечение 
+        |Программное обеспечение
         a href='https://vk.com/mehanoid' Григорьев О.
         br
-        |Верстка 
+        |Верстка
         a href='https://vk.com/serdce_ptici' Григорьева Ю.
         br
-        |Дизайн 
+        |Дизайн
         a href='https://vk.com/stormypetrel' Фанина А.
         br
         |2014&copy

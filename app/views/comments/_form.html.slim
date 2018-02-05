@@ -7,4 +7,4 @@
     = f.input :text, label: 'Комментарий', input_html: { rows: 5 }
 
   .form-actions
-    = f.submit 'Отправить'
+    = invisible_recaptcha_tags text: 'Отправить'

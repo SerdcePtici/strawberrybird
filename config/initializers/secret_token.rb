@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Strawberrybird::Application.config.secret_key_base = 'f9f28e3285e6587a08cb309e8113cf808b07cbf3de4cfcb8f48533eebccc6938bd64233a14564317de05149ec971f628af8899e3a41135b4f3fef81578e03e5d'
+Strawberrybird::Application.config.secret_key_base = ENV['SECRET_KEY_BASE'].presence || 'f9f28e3285e6587a08cb309e8113cf808b07cbf3de4cfcb8f48533eebccc6938bd64233a14564317de05149ec971f628af8899e3a41135b4f3fef81578e03e5d'
