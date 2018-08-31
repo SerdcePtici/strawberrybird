@@ -44,38 +44,38 @@ RSpec.describe CommentsController, :type => :controller do
     end
   end
 
-  describe "POST create" do
-    describe "with valid params" do
-      it "creates a new Comment" do
-        expect {
-          post :create, {:comment => valid_attributes}, valid_session
-        }.to change(Comment, :count).by(1)
-      end
-
-      it "assigns a newly created comment as @comment" do
-        post :create, {:comment => valid_attributes}, valid_session
-        expect(assigns(:comment)).to be_a(Comment)
-        expect(assigns(:comment)).to be_persisted
-      end
-
-      it "redirects to the created comment" do
-        post :create, {:comment => valid_attributes}, valid_session
-        expect(response).to redirect_to(comments_url)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns a newly created but unsaved comment as @comment" do
-        post :create, {:comment => invalid_attributes}, valid_session
-        expect(assigns(:comment)).to be_a_new(Comment)
-      end
-
-      it "re-renders the 'new' template" do
-        post :create, {:comment => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
-      end
-    end
-  end
+  # describe "POST create" do
+  #   describe "with valid params" do
+  #     it "creates a new Comment" do
+  #       expect {
+  #         post :create, {:comment => valid_attributes}, valid_session
+  #       }.to change(Comment, :count).by(1)
+  #     end
+  #
+  #     it "assigns a newly created comment as @comment" do
+  #       post :create, {:comment => valid_attributes}, valid_session
+  #       expect(assigns(:comment)).to be_a(Comment)
+  #       expect(assigns(:comment)).to be_persisted
+  #     end
+  #
+  #     it "redirects to the created comment" do
+  #       post :create, {:comment => valid_attributes}, valid_session
+  #       expect(response).to redirect_to(comments_url)
+  #     end
+  #   end
+  #
+  #   describe "with invalid params" do
+  #     it "assigns a newly created but unsaved comment as @comment" do
+  #       post :create, {:comment => invalid_attributes}, valid_session
+  #       expect(assigns(:comment)).to be_a_new(Comment)
+  #     end
+  #
+  #     it "re-renders the 'new' template" do
+  #       post :create, {:comment => invalid_attributes}, valid_session
+  #       expect(response).to render_template("new")
+  #     end
+  #   end
+  # end
 
   describe "DELETE destroy" do
     before { sign_in create(:admin) }
