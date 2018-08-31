@@ -6,10 +6,10 @@ p.comments-disabled
 #comment_table
   - @comments.each do |comment|
     .comment_number
+      span class="date"
+        = Russian::strftime(comment.created_at, "%d %b %Y, %H:%M")
       span class="guest_name"
         = comment.author
-      span class="date"
-        = l comment.created_at, format: :short
       p class="comment_text"
         = simple_format comment.text
       - if can? :destroy, resource
