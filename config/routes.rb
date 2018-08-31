@@ -5,7 +5,7 @@ Strawberrybird::Application.routes.draw do
   get 'author', to: 'pages#author'
   resources :poems
   resources :proses
-  resources :comments, path: 'guest_book', only: [:index, :create, :destroy]
+  resources :comments, path: 'guest_book', only: [:index, :destroy]
   devise_for :users
 
 
@@ -49,7 +49,7 @@ Strawberrybird::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

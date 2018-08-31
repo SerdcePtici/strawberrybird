@@ -1,6 +1,6 @@
 class CommentsController < InheritedResources::Base
   load_and_authorize_resource
-  actions :index, :create, :destroy
+  actions :index, :destroy
   has_scope :page, default: 1
   before_action :new_comment, only: :index
 

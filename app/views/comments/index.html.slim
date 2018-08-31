@@ -1,5 +1,7 @@
 -@title = "Гостевая книга"
-== render 'form'
+/ == render 'form'
+p.comments-disabled
+  | В настоящее время гостевая книга отключена
 
 #comment_table
   - @comments.each do |comment|
